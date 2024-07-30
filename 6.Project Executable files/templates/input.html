@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Prediction Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Revenue Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="number_of_customers">Number of Customers:</label>
+            <input type="float" id="number_of_customers" name="number_of_customers" required>
+            <br>
+            <label for="menu_price">Menu Price:</label>
+            <input type="float" id="menu_price" name="menu_price" required>
+            <br>
+            <label for="marketing_spend">Marketing Spend:</label>
+            <input type="float" id="marketing_spend" name="marketing_spend" required>
+            <br>
+            <label for="cuisine_type">Cuisine Type:</label>
+            <input type="text" id="cuisine_type" name="cuisine_type" required>
+            <br>
+            <label for="average_customer_spending">Average Customer Spending:</label>
+            <input type="float" id="average_customer_spending" name="average_customer_spending" required>
+            <br>
+            <label for="promotions">Promotions:</label>
+            <input type="integer" id="promotions" name="promotions" required>
+            <br>
+            <label for="reviews">Reviews:</label>
+            <input type="integer" id="reviews" name="reviews" required>
+            <br>
+            <button type="submit">Predict Revenue</button>
+        </form>
+    </div>
+</body>
+</html>
+
